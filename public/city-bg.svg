@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#060411"/>
+      <stop offset="0.55" stop-color="#0a0a1e"/>
+      <stop offset="1" stop-color="#150a24"/>
+    </linearGradient>
+    <radialGradient id="horizon" cx="0.5" cy="1.05" r="0.95">
+      <stop offset="0" stop-color="#ff2ea6" stop-opacity="0.5"/>
+      <stop offset="0.3" stop-color="#ff7a1a" stop-opacity="0.2"/>
+      <stop offset="0.6" stop-color="#7a2bff" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#4a7dff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="winC" width="16" height="22" patternUnits="userSpaceOnUse">
+      <rect x="3" y="5" width="4" height="7" fill="#00f0ff" opacity="0.75"/>
+    </pattern>
+    <pattern id="winM" width="20" height="30" patternUnits="userSpaceOnUse">
+      <rect x="6" y="7" width="4" height="10" fill="#ff5fd2" opacity="0.6"/>
+    </pattern>
+    <pattern id="winY" width="24" height="34" patternUnits="userSpaceOnUse">
+      <rect x="8" y="9" width="4" height="11" fill="#ffd24a" opacity="0.55"/>
+    </pattern>
+    <pattern id="winB" width="18" height="26" patternUnits="userSpaceOnUse">
+      <rect x="4" y="6" width="5" height="9" fill="#4a7dff" opacity="0.7"/>
+    </pattern>
+    <pattern id="winO" width="22" height="28" patternUnits="userSpaceOnUse">
+      <rect x="7" y="6" width="4" height="9" fill="#ff7a1a" opacity="0.65"/>
+    </pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow2" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <rect width="1920" height="1080" fill="url(#horizon)"/>
+
+  <!-- ===== far skyline ===== -->
+  <g fill="#0d1022">
+    <rect x="60" y="560" width="120" height="520"/>
+    <rect x="200" y="500" width="90" height="580"/>
+    <rect x="310" y="590" width="140" height="490"/>
+    <rect x="470" y="470" width="110" height="610"/>
+    <rect x="600" y="540" width="130" height="540"/>
+    <rect x="750" y="480" width="100" height="600"/>
+    <rect x="870" y="575" width="150" height="505"/>
+    <rect x="1040" y="510" width="110" height="570"/>
+    <rect x="1170" y="585" width="140" height="495"/>
+    <rect x="1330" y="495" width="100" height="585"/>
+    <rect x="1450" y="565" width="150" height="515"/>
+    <rect x="1620" y="520" width="110" height="560"/>
+    <rect x="1750" y="585" width="120" height="495"/>
+  </g>
+  <g opacity="0.5">
+    <rect x="60" y="560" width="120" height="520" fill="url(#winC)"/>
+    <rect x="200" y="500" width="90" height="580" fill="url(#winM)"/>
+    <rect x="310" y="590" width="140" height="490" fill="url(#winB)"/>
+    <rect x="470" y="470" width="110" height="610" fill="url(#winO)"/>
+    <rect x="600" y="540" width="130" height="540" fill="url(#winC)"/>
+    <rect x="750" y="480" width="100" height="600" fill="url(#winM)"/>
+    <rect x="870" y="575" width="150" height="505" fill="url(#winB)"/>
+    <rect x="1040" y="510" width="110" height="570" fill="url(#winY)"/>
+    <rect x="1170" y="585" width="140" height="495" fill="url(#winO)"/>
+    <rect x="1330" y="495" width="100" height="585" fill="url(#winC)"/>
+    <rect x="1450" y="565" width="150" height="515" fill="url(#winM)"/>
+    <rect x="1620" y="520" width="110" height="560" fill="url(#winB)"/>
+    <rect x="1750" y="585" width="120" height="495" fill="url(#winO)"/>
+  </g>
+
+  <!-- ===== mid skyline ===== -->
+  <g fill="#090b17">
+    <rect x="0" y="470" width="110" height="610"/>
+    <rect x="130" y="620" width="150" height="460"/>
+    <rect x="300" y="420" width="120" height="660"/>
+    <rect x="440" y="650" width="160" height="430"/>
+    <rect x="620" y="560" width="130" height="520"/>
+    <rect x="770" y="640" width="170" height="440"/>
+    <rect x="960" y="450" width="120" height="630"/>
+    <rect x="1100" y="630" width="160" height="450"/>
+    <rect x="1280" y="540" width="130" height="540"/>
+    <rect x="1430" y="655" width="170" height="425"/>
+    <rect x="1620" y="470" width="130" height="610"/>
+    <rect x="1770" y="610" width="150" height="470"/>
+  </g>
+  <g opacity="0.6">
+    <rect x="0" y="470" width="110" height="610" fill="url(#winC)"/>
+    <rect x="300" y="420" width="120" height="660" fill="url(#winM)"/>
+    <rect x="620" y="560" width="130" height="520" fill="url(#winY)"/>
+    <rect x="960" y="450" width="120" height="630" fill="url(#winC)"/>
+    <rect x="1280" y="540" width="130" height="540" fill="url(#winM)"/>
+    <rect x="1620" y="470" width="130" height="610" fill="url(#winC)"/>
+  </g>
+
+  <!-- ===== near frame buildings (edges only, keep centre low) ===== -->
+  <g fill="#05060c">
+    <rect x="0" y="330" width="150" height="750"/>
+    <rect x="150" y="520" width="90" height="560"/>
+    <rect x="1640" y="380" width="120" height="700"/>
+    <rect x="1780" y="300" width="140" height="780"/>
+  </g>
+  <g opacity="0.8">
+    <rect x="0" y="330" width="150" height="750" fill="url(#winM)"/>
+    <rect x="1780" y="300" width="140" height="780" fill="url(#winC)"/>
+  </g>
+
+  <!-- ===== neon signs (pulsing) ===== -->
+  <g filter="url(#glow)">
+    <rect x="1206" y="360" width="10" height="180" fill="#00f0ff" opacity="0.95">
+      <animate attributeName="opacity" values="0.95;0.35;0.95" dur="3.1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="1242" y="392" width="10" height="130" fill="#ff5fd2" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.4s" begin="-1.1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="980" y="500" width="86" height="8" fill="#4a7dff" opacity="0.95">
+      <animate attributeName="opacity" values="0.95;0.45;0.95" dur="4.2s" begin="-0.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="470" y="452" width="56" height="7" fill="#ff2e5f" opacity="0.9">
+      <animate attributeName="opacity" values="1;0.2;1;0.6;1" dur="3.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="340" y="470" width="8" height="150" fill="#ffd24a" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.8s" begin="-1.9s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="705" cy="620" r="34" fill="none" stroke="#ff5fd2" stroke-width="6" opacity="0.95">
+      <animate attributeName="opacity" values="0.95;0.4;0.95" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="705" cy="620" r="12" fill="#ff7a1a" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.3;0.85" dur="1.9s" repeatCount="indefinite"/>
+    </circle>
+    <rect x="1652" y="500" width="90" height="10" fill="#00f0ff" opacity="0.95">
+      <animate attributeName="opacity" values="0.95;0.35;0.95" dur="3.9s" begin="-2.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="1866" y="420" width="12" height="210" fill="#ff5fd2" opacity="0.95">
+      <animate attributeName="opacity" values="0.95;0.4;0.95" dur="2.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="30" y="430" width="12" height="240" fill="#b26bff" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.35;0.9" dur="3.3s" begin="-1.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="560" y="700" width="140" height="6" fill="#7dff2e" opacity="0.6"/>
+    <rect x="1490" y="740" width="120" height="6" fill="#ff7a1a" opacity="0.75"/>
+    <circle cx="390" cy="700" r="22" fill="none" stroke="#4a7dff" stroke-width="5" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.35;0.9" dur="2.6s" begin="-0.9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g filter="url(#glow2)">
+    <rect x="0" y="1042" width="1920" height="6" fill="#ff5fd2" opacity="0.65"/>
+    <rect x="0" y="1054" width="1920" height="4" fill="#00f0ff" opacity="0.55"/>
+  </g>
+
+  <!-- rooftop beacons (blinking) -->
+  <g filter="url(#glow)">
+    <circle cx="1020" cy="446" r="5" fill="#ff3b5c">
+      <animate attributeName="opacity" values="1;0.1;1" dur="1.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1685" cy="376" r="5" fill="#ff3b5c">
+      <animate attributeName="opacity" values="1;0.1;1" dur="1.7s" begin="-0.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="460" cy="416" r="5" fill="#00f0ff">
+      <animate attributeName="opacity" values="1;0.15;1" dur="2.3s" begin="-1.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ===== sky traffic — light-trail vehicles ===== -->
+  <g filter="url(#glow)">
+    <g>
+      <rect x="0" y="0" width="90" height="4" fill="#00f0ff" opacity="0.9"/>
+      <circle cx="92" cy="2" r="4" fill="#ffffff" opacity="0.95"/>
+      <animateTransform attributeName="transform" type="translate" from="-160 300" to="2100 240" dur="16s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <rect x="0" y="0" width="70" height="4" fill="#ff5fd2" opacity="0.9"/>
+      <circle cx="-2" cy="2" r="4" fill="#ffffff" opacity="0.95"/>
+      <animateTransform attributeName="transform" type="translate" from="2100 480" to="-200 525" dur="22s" begin="-7s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <rect x="0" y="0" width="60" height="3" fill="#ffd24a" opacity="0.85"/>
+      <circle cx="62" cy="1.5" r="3" fill="#ffffff" opacity="0.85"/>
+      <animateTransform attributeName="transform" type="translate" from="-110 150" to="2050 115" dur="26s" begin="-14s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <rect x="0" y="0" width="55" height="3" fill="#7dff2e" opacity="0.8"/>
+      <circle cx="-2" cy="1.5" r="3" fill="#ffffff" opacity="0.85"/>
+      <animateTransform attributeName="transform" type="translate" from="2050 200" to="-150 240" dur="31s" begin="-20s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- ===== drifting fog banks ===== -->
+  <g opacity="0.14">
+    <rect x="-400" y="760" width="1400" height="170" fill="#7fdfff" filter="url(#glow2)">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 260 0; 0 0" dur="34s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="900" y="700" width="1500" height="150" fill="#ff9fe8" filter="url(#glow2)">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -220 0; 0 0" dur="42s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

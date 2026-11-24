@@ -1,0 +1,157 @@
+/* ============================================================
+   SAS // SOCIAL AFTER SPACE — base tokens & atmosphere
+   ============================================================ */
+
+:root {
+  --bg-0: #050508;
+  --bg-1: #0a0b10;
+  --bg-2: #10121a;
+  --bg-3: #161926;
+
+  --line: rgba(160, 190, 255, 0.10);
+  --line-strong: rgba(160, 190, 255, 0.22);
+
+  --text: #eef2ff;
+  --muted: #8b93a7;
+  --dim: #5a617a;
+
+  --cyan: #00f0ff;
+  --purple: #b26bff;
+  --green: #b6ff2e;
+  --orange: #ff7a1a;
+  --red: #ff3b5c;
+
+  --accent: var(--cyan);
+  --accent-rgb: 0 240 255;
+
+  --font-display: 'Unbounded', 'Arial Black', sans-serif;
+  --font-body: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
+}
+
+[data-accent='purple'] { --accent: var(--purple); --accent-rgb: 178 107 255; }
+[data-accent='green']  { --accent: var(--green);  --accent-rgb: 182 255 46;  }
+[data-accent='orange'] { --accent: var(--orange); --accent-rgb: 255 122 26;  }
+
+/* per-element accent overrides (identity cards, avatars) */
+.acc-cyan   { --accent: var(--cyan);   --accent-rgb: 0 240 255; }
+.acc-purple { --accent: var(--purple); --accent-rgb: 178 107 255; }
+.acc-green  { --accent: var(--green);  --accent-rgb: 182 255 46;  }
+.acc-orange { --accent: var(--orange); --accent-rgb: 255 122 26;  }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { color-scheme: dark; }
+
+body {
+  background:
+    linear-gradient(rgba(4, 5, 9, 0.62), rgba(4, 5, 9, 0.72)),
+    url('/city-bg.svg') center / cover no-repeat fixed #050508;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ---------- layered cyberfunk atmosphere (static, cheap) ---------- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(900px 600px at 8% -10%, rgba(0, 240, 255, 0.10), transparent 60%),
+    radial-gradient(1000px 700px at 105% 110%, rgba(178, 107, 255, 0.11), transparent 60%),
+    radial-gradient(600px 500px at 85% 5%, rgba(255, 122, 26, 0.045), transparent 65%),
+    linear-gradient(rgba(0, 240, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.028) 1px, transparent 1px);
+  background-size: auto, auto, auto, 44px 44px, 44px 44px;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.014) 0 1px, transparent 1px 3px);
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-decoration: none; }
+button { font-family: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+::selection { background: rgba(var(--accent-rgb), 0.35); color: #fff; }
+
+/* ---------- scrollbars ---------- */
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-track { background: var(--bg-0); }
+::-webkit-scrollbar-thumb { background: var(--bg-3); border: 1px solid var(--line); }
+::-webkit-scrollbar-thumb:hover { background: rgba(var(--accent-rgb), 0.4); }
+
+/* ---------- typography helpers ---------- */
+.mono { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
+.dim { color: var(--dim); }
+.accent-text { color: var(--accent); }
+
+h1, h2, h3 { font-family: var(--font-display); text-transform: uppercase; line-height: 1.12; }
+
+/* ---------- glitch effect (intro + auth logo) ---------- */
+.glitch { position: relative; display: inline-block; }
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  opacity: 0.75;
+  pointer-events: none;
+}
+.glitch::before {
+  color: var(--cyan);
+  clip-path: inset(8% 0 62% 0);
+  animation: glitch-a 3.4s infinite steps(1);
+}
+.glitch::after {
+  color: var(--purple);
+  clip-path: inset(64% 0 6% 0);
+  animation: glitch-b 2.9s infinite steps(1);
+}
+
+@keyframes glitch-a {
+  0%, 88%, 100% { transform: translate(0, 0); }
+  90% { transform: translate(-3px, 1px); }
+  93% { transform: translate(3px, -2px); }
+  96% { transform: translate(-2px, 2px); }
+}
+@keyframes glitch-b {
+  0%, 84%, 100% { transform: translate(0, 0); }
+  86% { transform: translate(3px, 2px); }
+  90% { transform: translate(-3px, -1px); }
+  94% { transform: translate(2px, -2px); }
+}
+
+/* ---------- shared keyframes ---------- */
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(182, 255, 46, 0.5); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 5px rgba(182, 255, 46, 0); }
+}
+
+.spinner { animation: spin 0.9s linear infinite; }
+.pulse-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--green); display: inline-block;
+  animation: pulse 2.2s infinite;
+}
+
+.linkish { color: var(--dim); text-decoration: underline; text-underline-offset: 3px; }
+.linkish:hover { color: var(--accent); }
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+[data-motion='off'] .glitch::before, [data-motion='off'] .glitch::after { display: none; }
+[data-motion='off'] * { animation-duration: 0.01ms !important; }
